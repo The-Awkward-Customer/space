@@ -1,7 +1,19 @@
 :root {
+  --space-black: #121212;
+  --star-white: rgb(249, 255, 254);
+}
+
+@font-face {
+  font-family: "DINPro";
+  src: url("fonts/DINPro-Light.otf") format("opentype"),
+    url("fonts/DINPro-Regular.otf") format("opentype"),
+    url("fonts/DINPro-Medium.otf") format("opentype"),
+    url("fonts/DINPro-Bold.otf") format("opentype"),
+    url("fonts/DINPro-Black.otf") format("opentype");
 }
 
 * {
   margin: none;
   box-sizing: border-box;
+  font-family: "DINPro", Arial, Helvetica, sans-serif;
 }
