@@ -1,29 +1,61 @@
 :root {
+  /* base colors */
   --space-black: #121212;
   --star-white: rgb(249, 255, 254);
 
+  /* font sizes */
   --font-size-base: 16px;
+  --font-size-xs: 0.75rem;
   --font-size-s: 0.875rem;
   --font-size-default: 1rem;
   --font-size-m: 1.25rem;
   --font-size-l: 1.75rem;
   --font-size-xl: 3rem;
-
-  --font-weight-reg: 400;
-  --font-weight-medium: 500;
+  /* font weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
   --font-weight-bold: 700;
-
+  --font-weight-black: 900;
+  /* line heights */
   --line-height-base: 1.5;
   --line-height-tight: 1.2;
+}
+/* declares custom font family */
+/* each must be declared properly in order to enable the use of weight */
+@font-face {
+  font-family: "DINPro";
+  src: url("fonts/DINPro-Light.otf") format("opentype");
+  font-weight: light;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "DINPro";
-  src: url("fonts/DINPro-Light.otf") format("opentype"),
-    url("fonts/DINPro-Regular.otf") format("opentype"),
-    url("fonts/DINPro-Medium.otf") format("opentype"),
-    url("fonts/DINPro-Bold.otf") format("opentype"),
-    url("fonts/DINPro-Black.otf") format("opentype");
+  src: url("fonts/DINPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DINPro";
+  src: url("fonts/DINPro-Medium.otf") format("opentype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DINPro";
+  src: url("fonts/DINPro-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DINPro";
+  src: url("fonts/DINPro-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
 }
 
 * {
@@ -33,7 +65,8 @@
 }
 
 html {
-  font-size: var(--font-size-base);
+  /* font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold); */
 }
 
 .footerGlobal {
@@ -43,19 +76,20 @@ html {
   justify-content: center;
   background-color: var(--space-black);
   padding: 20px 0px;
-  gap: 32px;
+  gap: 20px;
 }
 
 .footerGlobal span {
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-xs);
   font-weight: var(--font-weight-reg);
   color: var(--star-white);
   text-transform: uppercase;
 }
 
 .footerGlobal a {
-  font-size: var(--font-size-s);
-  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-xs);
   color: var(--star-white);
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
 }
