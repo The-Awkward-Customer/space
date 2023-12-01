@@ -1,6 +1,20 @@
 :root {
   --space-black: #121212;
   --star-white: rgb(249, 255, 254);
+
+  --font-size-base: 16px;
+  --font-size-s: 0.875rem;
+  --font-size-default: 1rem;
+  --font-size-m: 1.25rem;
+  --font-size-l: 1.75rem;
+  --font-size-xl: 3rem;
+
+  --font-weight-reg: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --line-height-base: 1.5;
+  --line-height-tight: 1.2;
 }
 
 @font-face {
@@ -13,7 +27,35 @@
 }
 
 * {
-  margin: none;
+  margin: 0px;
   box-sizing: border-box;
   font-family: "DINPro", Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+.footerGlobal {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  background-color: var(--space-black);
+  padding: 20px 0px;
+  gap: 32px;
+}
+
+.footerGlobal span {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-reg);
+  color: var(--star-white);
+  text-transform: uppercase;
+}
+
+.footerGlobal a {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-medium);
+  color: var(--star-white);
+  text-decoration: none;
 }
