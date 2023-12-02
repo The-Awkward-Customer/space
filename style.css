@@ -175,11 +175,11 @@ body {
 }
 
 .sectionHero:nth-of-type(2) {
-  background-image: url(/images/eclipse.jpg);
+  background-image: url(./images/eclipse.jpg);
 }
 
 .sectionHero:nth-of-type(3) {
-  background-image: url(/images/galaxy.jpg);
+  background-image: url(./images/galaxy.jpg);
 }
 
 .sectionHero video {
