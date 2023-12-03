@@ -23,6 +23,8 @@
   /* line heights */
   --line-height-base: 1.5;
   --line-height-tight: 1.2;
+
+  /* breakpoints */
 }
 /* declares custom font family */
 /* each must be declared properly in order to enable the use of weight */
@@ -114,11 +116,18 @@ html {
 .buttonOutlined:active {
   scale: 0.95;
 }
+/* sets style of body  */
 
 body {
   display: flex;
   flex-flow: column nowrap;
 }
+
+/* @media screen and (max-width: 768px) {
+  body {
+    display: none;
+  }
+} */
 
 /* styles for globalHeader */
 .globalHeader {
@@ -134,6 +143,12 @@ body {
   width: 100%;
   z-index: 999;
 }
+@media screen and (max-width: 768px) {
+  .globalHeader {
+    padding: 32px 32px 32px 32px;
+  }
+}
+
 .globalHeader section {
   display: flex;
   flex-flow: row nowrap;
@@ -145,6 +160,12 @@ body {
   display: flex;
   flex-flow: row nowrap;
   gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .globalHeader section nav:first-of-type {
+    display: none;
+  }
 }
 
 .globalHeader h1 {
@@ -164,6 +185,7 @@ body {
 }
 
 /* styles for heroSections */
+
 .sectionHero {
   position: relative;
   background-size: cover;
@@ -172,6 +194,12 @@ body {
   height: 100vh;
   width: 100%;
   overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionHero:nth-of-type(1) {
+    background-image: url(./images/landscape.jpg);
+  }
 }
 
 .sectionHero:nth-of-type(2) {
@@ -192,11 +220,24 @@ body {
   transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width: 768px) {
+  .sectionHero video {
+    display: none;
+  }
+}
+
 .sectionHero span {
   position: absolute;
   bottom: 20vh;
   left: 20vw;
   color: var(--star-white);
+}
+
+@media screen and (max-width: 768px) {
+  .sectionHero span {
+    bottom: 32px;
+    left: 32px;
+  }
 }
 
 .sectionHero p {
@@ -206,11 +247,24 @@ body {
   text-shadow: var(--text-shadow-default);
 }
 
+@media screen and (max-width: 768px) {
+  .sectionHero p {
+    font-size: var(--font-size-s);
+  }
+}
+
 .sectionHero h1,
 .sectionHer h2 {
   font-size: var(--font-size-xl);
   padding-bottom: 20px;
   text-shadow: var(--text-shadow-default);
+}
+
+@media screen and (max-width: 768px) {
+  .sectionHero h1,
+  .sectionHer h2 {
+    font-size: var(--font-size-m);
+  }
 }
 
 /* styles for footer component */
